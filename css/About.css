@@ -1,0 +1,48 @@
+
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50c878;
+            --background-light: #f4f7f6;
+        }
+
+        body {
+            background-color: var(--background-light);
+        }
+
+        .navbar {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: var(--primary-color) !important;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .creators-section {
+            background-color: white;
+            padding: 50px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .footer-social img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-social img:hover {
+            transform: scale(1.2);
+        }
+ 

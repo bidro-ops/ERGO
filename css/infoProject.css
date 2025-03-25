@@ -1,0 +1,441 @@
+/*###########  Default  ##############*/
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+    background-color: #1E1E2E;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+body.light-mode {
+    background-color: #F5F5FA;
+    color: black;
+}
+
+
+
+
+/*###########  nav bar  ##########*/
+nav {
+    display: block ;
+    width: 100%;
+    background-color: #2A2A3C;
+    box-shadow: -2px -2px 20px 2px rgba(0,0,0,.15) ,2px 2px 4px rgba(0,0,0,1);
+    margin: 0  ;
+    padding: 10px 15px;
+}
+nav ul {
+    overflow: hidden ; 
+    margin: 0 ;
+    padding: 0 ;
+}
+ul.topnav li{
+    list-style: none ;
+    float: left ;
+}
+ul.topnav li.topnav-left{
+    list-style: none ;
+    float: left;
+}
+ul.topnav li.topnav-right{
+    list-style: none ;
+    float: right ;
+}
+ul.topnav li a{
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #e7e7ee;
+    transition: 0.3s;      
+}
+ul.topnav li a:hover {
+    background-color: #0080ff ;
+    color: #fff;
+}
+ul.topnav li.icon{
+    display: none ;
+}
+
+/*
+body.light-mode nav {
+    background-color: #eee;
+}
+
+body.light-mode .topnav li a {
+    color: black;
+}
+
+body.light-mode .topnav li a:hover {
+    background-color: #ddd;
+}
+*/
+.usericon , .dash-icon , .sett-icon , .not-icon , .dashicon{
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+/*
+body.light-mode .usericon,
+body.light-mode .dash-icon,
+body.light-mode .sett-icon,
+body.light-mode .not-icon,
+body.light-mode .dashicon {
+    filter: brightness(1);
+}
+*/
+ /* ######## USER PANEL ##########*/
+.hidden-panel , .theme-panel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #020024;
+    color: #fff ;
+    border-radius: 8px;
+    z-index: 9999; 
+    width: 200px;
+}
+.visible {
+    display: block ;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.hidden-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden-panel li {
+    padding: 10px;
+    text-align: left;
+}
+
+.hidden-panel li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hidden-panel li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 6px;
+}
+.profil-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+.username {
+    font-weight: bold;
+    filter: brightness(0) invert(1);
+}
+.log-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+/*########### Setting panel ###########""*/
+/* Hidden panel styles */
+
+
+.switch {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Toggle on */
+input:checked + .slider {
+    background-color: #0080ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* Light Mode Switch */
+body.light-mode .slider {
+    background-color: #ccc;
+}
+
+
+/*########## dashboard  ##########*/
+.main-container {
+    display: flex;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.dash-board {
+    height: 100vh;
+    background-color: #2A2A3C;
+    box-shadow: -2px -2px 20px 2px rgba(0,0,0,.15) ,2px 2px 4px rgba(0,0,0,1);
+    padding: 10px;
+    transition: transform 0.3s ease-in-out ;
+    position: obsolute;
+}
+
+.dash-board.active {
+    transform: translateX(-100%);
+    position: absolute;
+}
+.dash-board ul , .hidden-panel ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.dash-board ul li {
+    padding: 15px;
+    text-align: left;
+}
+.dash-board ul li a , .hidden-panel ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.dash-board ul li a:hover {
+    background-color: #0080ff;
+    display: block;
+}
+.dashicon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); 
+}
+/*
+.light-mode .dash-board {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.light-mode .dash-board ul li a {
+    color: black;
+}
+
+.light-mode .dash-board ul li a:hover {
+    background-color: #ddd;
+}
+
+.light-mode .dashicon {
+    filter: brightness(1); 
+}
+*/
+
+
+/* ###############Table ############*/
+.table-container {
+    flex-grow: 1; 
+    transition: right 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    height: calc(100vh - 60px) ;
+    overflow: hidden ;
+   
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2b2b2b;
+    color: #eee ;
+    
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #202020;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+}
+tbody tr:hover {
+    background-color: #3a3a3a;
+}
+td a {
+    text-decoration: none;
+    color: #fff ;
+}
+/* Light Mode Table */
+/*body.light-mode table {
+    background-color: #eee;
+    color: black;
+}
+body.light-mode thead tr {
+    background-color: #ddd;
+}
+body.light-mode td a {
+    color: black;
+}
+
+body.light-mode tbody tr:hover {
+    background-color: #f0f0f0;
+}*/
+
+
+/*################# plus icon #################""*/
+.hidden-select , .hidden-input {
+    display: none; 
+    width: 130px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.plus-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #0080ff;
+    transition: 0.3s;
+}
+
+.plus-icon:hover {
+    color: #0056b3;
+}
+
+.saved-text {
+    display: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+/*################   Mobile  #################*/
+@media screen and (max-width: 680px){
+    ul.topnav li:not(:nth-child(1)) {
+        display: none ;
+    }
+    ul.topnav li.icon{
+        display: block ;
+        float: right ;
+    }
+    ul.topnav.responsive li.icon {
+        position: absolute ;
+        top: 0 ;
+        right: 0 ;
+    }
+ul.topnav.responsive{
+    position: relative ;
+}
+ul.topnav.responsive li {
+    display: inline ;
+    float: none ;
+}
+ul.topnav.responsive li a {
+    display: block ;
+    text-align: left ;
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dash-board {
+        width: 200px;
+    }
+
+    .table-container {
+        padding: 10px;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        padding: 5px;
+    }
+
+    .dash-board {
+        width: 180px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+
+}
+
+
+h1 {
+    margin: 10px;
+}
+
+   .chat-message {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .chat-message.received {
+        background-color: #f0f0f0;
+    }
+    .chat-message.sent {
+        background-color: #d1e7dd;
+        margin-left: 20%;
+    }

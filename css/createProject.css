@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#addMember{
+  display: none;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    overflow-y: auto;
+    background:  #B2BEB5 ;
+    padding: 30px;
+    padding-left: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 800px;
+}
+
+.leftside{
+  width: 60%;
+}
+
+textarea{
+  margin: 5px;
+  width: 100%;
+}
+
+.sec{
+  display: inline;  
+  margin-top: 20px;
+   gap: var(--spacing, 10px);
+}
+.sec:nth-of-type(1){
+  display: flex;
+}
+
+
+#smallTask{
+  width: 80%;
+}
+.addSmallTask{
+  width: 19%;
+}
+ul{
+  padding: 5px;
+  padding-left: 0px;
+  
+}
+li {
+  margin-top: 3px;
+  display: flex;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 4px;
+}
+li>input{
+  margin-left: 0px;
+}
+input[type="file"]{
+  margin-bottom: 10px;
+}
+button{
+  float: right;
+}
+img{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.comments{
+  display: flex;
+  width: 39%;
+  padding: 30px;
+  padding-top: 100px;
+  flex-direction: column;
+}
+li.completed{
+  text-decoration: line-through;
+}
+
+.progressBorder{
+  margin: 5px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+#progressBar{
+  height: 10px;
+  width: 0%;
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+
+#comments-container{
+  display: flex;
+  margin-top: 30px;
+  overflow-y: auto; 
+  height: 400px;
+  flex-direction: column;
+}
+.comment{
+  width:100%;
+  display: flex;
+}
+.comment-content{
+  display: flex;
+  flex-direction: column;
+}
+
